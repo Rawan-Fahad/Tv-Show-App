@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grave"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.beltexam2_rawanalanzi.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_APIFragment"
+            app:destination="@id/APIFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/APIFragment"
+        android:name="com.example.beltexam2_rawanalanzi.viewModel.APIFragment"
+        android:label="fragment_a_p_i"
+        tools:layout="@layout/fragment_a_p_i" >
+        <action
+            android:id="@+id/action_APIFragment_to_roomFragment"
+            app:destination="@id/roomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/roomFragment"
+        android:name="com.example.beltexam2_rawanalanzi.RoomFragment"
+        android:label="fragment_room"
+        tools:layout="@layout/fragment_room" />
+</navigation>
